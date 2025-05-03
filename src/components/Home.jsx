@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Tanya from "../../images/image-tanya.jpg";
+import John from "../../images/image-john.jpg";
 import Next from "../../images/icon-next.svg";
 import Prev from "../../images/icon-prev.svg";
 import { motion, AnimatePresence } from "framer-motion";
@@ -11,7 +12,7 @@ const profiles = [
       "“ I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. ”",
     name: "Tanya Sinclair",
     position: "UX Engineer",
-    image: "../../images/image-tanya.jpg",
+    image: Tanya,
   },
   {
     id: 2,
@@ -19,7 +20,7 @@ const profiles = [
       "“ If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. ” ",
     name: "John Tarkpor",
     position: "Junior Front-end Developer",
-    image: "../../images/image-john.jpg",
+    image: John,
   },
 ];
 
@@ -49,7 +50,7 @@ const Home = () => {
       <motion.div
         initial={{ opacity: 0, x: step === 0 ? -100 : 100 }}
         animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: step === 0 ? -100 : 100}}
+        exit={{ opacity: 0, x: step === 0 ? -100 : 100 }}
         transition={{ duration: 0.5 }}
         key={profile.id}
         className=" w-full max-w-5xl flex gap-10 sm:gap-0 flex-col-reverse sm:flex-row h-fit items-center"
